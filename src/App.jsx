@@ -3,6 +3,7 @@ import './scss/App.css'
 import NavBar from './components/common/NavBar';
 import Home from './pages/Home';
 
+
 function App() {
   return (
    <div className='mx-auto col-md-11'>

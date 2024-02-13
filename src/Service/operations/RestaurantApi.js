@@ -1,12 +1,13 @@
 import { apiConnector } from "../apiConnector";
 
-const getRestaurantListApi=process.env.BASE_API_URL+"/restaurant/getRestaurantList";
-const getRestaurantDataApi=process.env.BASE_API_URL+"/restaurant/getRestaurantData";
+
+const getRestaurantListApi=process.env.REACT_APP_BASE_URL +"/restaurant/getRestaurantList";
+const getRestaurantDataApi=process.env.REACT_APP_BASE_URL +"/restaurant/getRestaurantData";
 
 export const getRestaurantList = async () => {
     try {
-        const response = await apiConnector('GET', getRestaurantListApi);
-    console.log("GET RESTAURANT LIST API RESPONSE",response.data);
+        const response = await apiConnector('POST', getRestaurantListApi);
+    console.log("GET RESTAURANT LIST API RESPONSE",response);
     if (!response?.data?.success) {
         throw new Error("Could Not Fetch Restaurant List")
       }
