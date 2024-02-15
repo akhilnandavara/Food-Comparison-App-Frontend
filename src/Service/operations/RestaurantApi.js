@@ -6,12 +6,12 @@ const getRestaurantDataApi=process.env.REACT_APP_BASE_URL +"/restaurant/getResta
 
 export const getRestaurantList = async () => {
     try {
-        const response = await apiConnector('POST', getRestaurantListApi);
+        const response = await apiConnector('GET', getRestaurantListApi);
     console.log("GET RESTAURANT LIST API RESPONSE",response);
     if (!response?.data?.success) {
         throw new Error("Could Not Fetch Restaurant List")
       }
-    return response.data;
+    return response.data.data;
     } catch (error) {
         console.error(error);
     }
