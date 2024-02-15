@@ -17,14 +17,14 @@ export const getRestaurantList = async () => {
     }
 }
 
-export const getRestaurantData = async (id) => {
+export const getRestaurantData = async (restrurantId) => {
     try {
-        const response = await apiConnector('GET', getRestaurantDataApi, id);
+        const response = await apiConnector('POST',getRestaurantDataApi,{restrurantId:restrurantId});
     console.log("GET RESTAURANT DATA API RESPONSE",response.data);
     if (!response?.data?.success) {
         throw new Error("Could Not Fetch Restaurant Data")
       }
-    return response.data;
+    return response.data.data[0];
     } catch (error) {
         console.error(error);
     }

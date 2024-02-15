@@ -12,7 +12,6 @@ const Home = () => {
   const fetchRestaurantList=async () => {
     const res = await getRestaurantList();
      setLists(res);
-     console.log(lists);
     }
     useEffect(() => {
     setLoading(true)

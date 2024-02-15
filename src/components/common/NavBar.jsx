@@ -9,7 +9,7 @@ export default function NavBar() {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary ">
         <div className="container-lg mx-0 ">
-          <Link className="navbar-brand object-fit-cover" to="/">
+          <Link className="navbar-brand object-fit-cover" to="/home">
             <img src={logo} alt="Logo" width={200} />
           </Link>
           <button

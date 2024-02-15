@@ -9,7 +9,6 @@ export default function CuisineData() {
     const [loading, setLoading] = useState(false)
 
     
-
     useEffect(() => {
         ( (async () => {
             const getCuisineBasedRestaurants = await getCuisineData(cuisineName);
