@@ -2,7 +2,7 @@ exports.topBrandsUrls = [
     {
         name: 'Meghana Foods',
         imageUrl: 'https://b.zmtcdn.com/data/brand_creatives/logos/ec72c289aa01d947fe15a009ce8e559f_1616052816.png?output-format=webp',
-        url: '/restaurant/Meghana-Foods'
+        url: '/restrurant/:65cf37e88d921dc019a0e854'
     },
     {
         name: 'Hotel Empire',
@@ -27,7 +27,7 @@ exports.topBrandsUrls = [
     {
         name: 'Kfc',
         imageUrl: 'https://b.zmtcdn.com/data/brand_creatives/logos/80c09d718acddee05a655eb378bb442f_1617875125.png?output-format=webp',
-        url: '/restaurant/kfc'
+        url: '/restrurant/:65cf382a8d921dc019a0ec94'
     },
     {
         name: 'FreshMenu',

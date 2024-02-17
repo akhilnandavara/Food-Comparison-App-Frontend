@@ -6,7 +6,6 @@ import CuisineData from './pages/CuisineData';
 import RestrurantDataPage from './pages/RestrurantData';
 import OverView from './components/core/Resturant/OverView';
 import MenuItem from './components/core/Resturant/MenuItem';
-import Offers from './components/core/Resturant/Offers';
 import Reviews from './components/core/Resturant/Reviews';
 
 
@@ -20,7 +19,6 @@ function App() {
         <Route path='restrurant/:restaurantId' element={<RestrurantDataPage/>}> 
         <Route path='order-online' element={<MenuItem/>}/>
         <Route path='' element={<OverView/>}/>
-        <Route path='offers' element={<Offers/>}/>
         <Route path='reviews' element={<Reviews/>}/>
         </Route>
     </Routes>
