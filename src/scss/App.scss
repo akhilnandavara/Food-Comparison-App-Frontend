@@ -161,6 +161,43 @@ body {
   
 }
 
+//Overview-offers section
+.offers-card{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #f5f5f5;
+    margin: 1rem 0;
+   
+    .offers-text{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        .offers-title{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .offers-desc{
+            font-size: 1rem;
+            font-weight: lighter;
+        }
+    }
+
+    
+}
+
+
+.restoLocation-card{
+    width: 35rem;
+    background: gray;
+    height: fit-content;
+}
+
+
+
+
+//Responsive
 
 @media screen and (min-width: 1200px) {
     #navbarSupportedContent {
