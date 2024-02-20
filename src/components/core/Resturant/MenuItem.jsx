@@ -1,27 +1,42 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getRestaurantMenu } from "../../../Service/operations/RestaurantApi";
+import { useDispatch} from "react-redux";
+import { addToCart } from "../../../slices/cartSlice";
 
 export default function MenuItem() {
   let { restaurantId } = useParams();
   restaurantId = restaurantId.split(":")[1];
   const [menu, setMenu] = useState([]);
   const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
+
+
 
   useEffect(() => {
-    (async () => {
+    const fetchRestaurantMenu=async () => {
       setLoading(true);
       const response = await getRestaurantMenu(restaurantId);
-      console.log(response);
       setMenu(response);
       setLoading(false);
-    })();
+    }
+    if(!menu.length){
+
+      fetchRestaurantMenu()
+    }
   }, []);
 
+  
+
+  const handleAddToCart = (restaurantId,data) => {
+    dispatch(addToCart({restaurantId,name:menu.name ,item:data}))
+  }
+  
+ 
   return (
     <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <div>Loading...</div>
       ) : (
         <div className="accordion" id="accordionPanelsStayOpenExample">
           {menu?.menu?.map((section, sectionIndex) => (
@@ -60,11 +75,14 @@ export default function MenuItem() {
                         <p>{menuItem.description}</p>
                       </div>
                       {/* Image */}
-                      <div className="menuItem">
                         {menuItem.image && (
-                          <img src={menuItem.image} alt={menuItem.name} />
+                          <div className="menuItem-right">
+                            <img src={menuItem.image} alt={menuItem.name} className="menuItem-img" />
+                            <button onClick={()=>handleAddToCart(restaurantId,{ItemName:menuItem.name,price:menuItem.swiggyPrice,_id:menuItem._id})}>Add to cart</button>
+                          </div>
+
                         )}
-                      </div>
+                      
                     </div>
                   ))}
                 </div>

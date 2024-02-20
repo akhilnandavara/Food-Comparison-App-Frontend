@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -183,20 +185,43 @@ body {
             font-weight: lighter;
         }
     }
-
-    
 }
 
-
-.restoLocation-card{
-    width: 35rem;
-    background: gray;
+.overView-content{
+    position: relative;
+    color: black;
     height: fit-content;
+
+    .restoLocation-card{
+        position: sticky;
+        top: 0;
+        right: 0;
+        width: 20rem;
+        background: gray;
+    }
 }
 
-
-
-
+//Menu section
+.menuItem-right{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    button{
+        position: absolute;
+        bottom:0;
+        left: 20%;
+        background-color: #f5f5f5;
+        border: transparent;
+        padding: .5rem;
+        border-radius: 1rem;
+        
+        // font-size: 1.5rem;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: #c1bfbf;
+    }
+}
 //Responsive
 
 @media screen and (min-width: 1200px) {

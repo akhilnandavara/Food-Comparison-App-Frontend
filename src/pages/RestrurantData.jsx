@@ -76,7 +76,7 @@ export default function RestrurantDataPage() {
                   </div>
                   <div className="d-flex flex-column">
                     <span className="fw-bold">
-                      {restaurantData?.googleData?.ratings?.[0]?.review}+
+                      {restaurantData?.googleData?.ratings?.[0]?.reviews}+
                     </span>
                     <span className="rating-text">Google Ratings</span>
                   </div>

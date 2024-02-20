@@ -7,8 +7,7 @@ import RestrurantDataPage from './pages/RestrurantData';
 import OverView from './components/core/Resturant/OverView';
 import MenuItem from './components/core/Resturant/MenuItem';
 import Reviews from './components/core/Resturant/Reviews';
-
-
+import Cart from './components/core/Resturant/Cart';
 
 function App() {
   return (
@@ -16,6 +15,7 @@ function App() {
     <NavBar/>
     <Routes>
       <Route path='/home' element={<Home/>}/>
+      <Route path='/cart' element={<Cart/>}/>
       <Route path='/cuisine/:cuisineName' element={<CuisineData/>}/>
         <Route path='restrurant/:restaurantId' element={<RestrurantDataPage/>}> 
         <Route path='order-online' element={<MenuItem/>}/>
@@ -23,7 +23,7 @@ function App() {
         <Route path='reviews' element={<Reviews/>}/>
         </Route>
     </Routes>
-   </div>
+    </div>  
   );
 }
 

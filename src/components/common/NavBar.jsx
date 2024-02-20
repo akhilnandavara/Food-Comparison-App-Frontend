@@ -49,6 +49,17 @@ export default function NavBar() {
                     <span>Offers</span>
                   </Link>
                 </li>
+
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active d-flex flex-row align-items-center gap-2"
+                    aria-current="page"
+                    to="/cart"
+                  >
+                  
+                    <span>Cart</span>
+                  </Link>
+                </li>
             
                 <li className="nav-item">
                   <Link
